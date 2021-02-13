@@ -22,6 +22,7 @@ public class Pessoa {
     private String pdf;
 
     @ManyToOne
+    @Column(name = "ID_CONTA")
     private Conta conta;
 
     public Pessoa() {
