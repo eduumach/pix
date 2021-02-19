@@ -1,8 +1,7 @@
-package com.github.eduumach.pix.entity;
+package com.github.eduumach.pix.model;
 
 import org.javamoney.moneta.Money;
 
-import javax.money.MonetaryAmount;
 import javax.persistence.*;
 
 @Entity

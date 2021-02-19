@@ -1,23 +1,16 @@
-package com.github.eduumach.pix.entity;
+package com.github.eduumach.pix.request;
 
-import javax.persistence.*;
+import com.github.eduumach.pix.model.Pessoa;
 
-@Entity
-@Table(name = "Chave")
-public class Chave {
+public class ChaveRequest {
 
-    @Id
-    @Column(name = "ID")
     private String chave;
-
-    @ManyToOne
-    @Column(name = "ID_PESSOA")
     private Pessoa pessoa;
 
-    public Chave() {
+    public ChaveRequest() {
     }
 
-    public Chave(String chave, Pessoa pessoa) {
+    public ChaveRequest(String chave, Pessoa pessoa) {
         this.chave = chave;
         this.pessoa = pessoa;
     }

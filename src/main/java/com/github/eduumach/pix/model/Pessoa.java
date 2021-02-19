@@ -1,7 +1,5 @@
-package com.github.eduumach.pix.entity;
+package com.github.eduumach.pix.model;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 
@@ -19,7 +17,7 @@ public class Pessoa {
     private String name;
 
     @Column(name = "CPF")
-    private String pdf;
+    private String cpf;
 
     @ManyToOne
     @Column(name = "ID_CONTA")
@@ -28,9 +26,9 @@ public class Pessoa {
     public Pessoa() {
     }
 
-    public Pessoa(String name, String pdf, Conta conta) {
+    public Pessoa(String name, String cpf, Conta conta) {
         this.name = name;
-        this.pdf = pdf;
+        this.cpf = cpf;
         this.conta = conta;
     }
 
@@ -50,12 +48,12 @@ public class Pessoa {
         this.name = name;
     }
 
-    public String getPdf() {
-        return pdf;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setPdf(String pdf) {
-        this.pdf = pdf;
+    public void setCpf(String pdf) {
+        this.cpf = pdf;
     }
 
     public Conta getConta() {
